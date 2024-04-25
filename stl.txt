@@ -1,0 +1,75 @@
+- STL - lecture 19
+    - array<int,4>a ={1,2,3,4} having .size() method and #include<array>
+        - .empty() returns 0 or 1, and .at(index) returns array element at that index.
+        - .front() and .back()
+    - vector
+        
+        .size() → returns how many elements in the vector
+        
+        .capacity() → what memory is allocated to the vector 
+        
+        - how
+            
+            , doubles the capacity when overflowed and dumps old array by copying into double capacity vector
+            
+        
+        .push_back(element) and pop_back()
+        
+        .clear() to pop entire vector
+        
+        .begin() to having starting iterator
+        
+        vector<int> a(5,1) → initializes vector a with 5 size and value of 1s
+        
+        vector <int> b(a) → copies vector into vector b.
+        
+    - deque
+        - The deque stands for Double Ended Queue. Deque is **a linear data structure where the insertion and deletion operations are performed from both ends**.
+        - push_front(element) , pop_front()
+        - .erase(from d.begin(), and remove only  one element i.e de.begin()+1)
+        
+        
+    - list
+        - list stl is made using doubly linked list containing 3 parts, node data, pointer to previous and next node in sequence
+        - time complexity is O(n) of l.erase() as it has to traverse upto n. Other methods in list has time complexity of O(1).
+        - l.erase(l.begin()) just deletes the which l.begin() points.
+    - stack
+        - Last In First Out (LIFO) #include<stack>
+        - s.push(”string”), s.pop(), s.top()
+        
+        
+    - queue
+        - First In First Out: FIFO
+        - queue<string> q; q.push(”love”) q.front()→ love
+    - Priority queue
+        
+        same header file <queue> 
+        
+        - priority_queue<int> p; returns max element at first i.e `max heap`
+        - priority_queue< int, vector<int>, greater<int> > mini; → `min heap`
+        
+        
+    - Set
+        - ordered(slower) and unordered set.
+        - only stores unique element
+        - s.count(5) returns 1 or 0 based on if 5 is present or not.
+        - Didn’t understand the iterator properly.
+        - time complexity : O(logn)
+        - insert, find, erase, count has time complexity of
+    - Map
+        - Complixity: O (logn)
+        - ordered form
+        - data is stored in key - value pair
+        - map<int,string> m;
+            
+            
+- Algorithm
+    - #include<algorithm>
+    - binary_search(v.begin(), v.end(), 5)
+    - lower_bound( ) and upper+bound( )
+    - reverse( .begin(), .end())
+    - roatate( .begin(), .begin() +1, end() )
+    - swap, sort( arr) → introsort
+    - introsort
+        
+        Introsort is a sorting algorithm that combines quicksort, heapsort, and insertion sort to achieve both fast average performance and optimal worst-case performance
